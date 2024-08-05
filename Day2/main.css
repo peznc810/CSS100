@@ -1,0 +1,138 @@
+/* https://100dayscss.com/days/2/ */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+body {
+  box-sizing: border-box;
+}
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #fff;
+  color: #333;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.frame {
+  background-color: #3FAF82;
+}
+
+.menu {
+  width: 80px;
+  height: 52px;
+  cursor: pointer;
+}
+.menu.active .line:nth-child(1) {
+  animation: animate-line-1 1s forwards;
+}
+.menu.active .line:nth-child(2) {
+  animation: animate-line-2 1s forwards;
+}
+.menu.active .line:nth-child(3) {
+  animation: animate-line-3 1s forwards;
+}
+
+.line {
+  width: 100%;
+  height: 8px;
+  border-radius: 10px;
+  box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.3);
+  background-color: #fff;
+}
+.line:nth-child(1) {
+  animation: animate-line-1-rev 1s forwards;
+}
+.line:nth-child(2) {
+  margin: 14px 0;
+  animation: animate-line-2-rev 1s forwards;
+}
+.line:nth-child(3) {
+  animation: animate-line-3-rev 1s forwards;
+}
+
+.no-animation {
+  animation: none !important;
+}
+
+@keyframes animate-line-1 {
+  0% {
+    transform: translate3d(0, 0, 0) rotate(0);
+  }
+  50% {
+    transform: translate3d(0, 22px, 0) rotate(0);
+  }
+  100% {
+    transform: translate3d(0, 22px, 0) rotate(45deg);
+  }
+}
+@keyframes animate-line-2 {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+@keyframes animate-line-3 {
+  0% {
+    transform: translate3d(0, 0, 0) rotate(0);
+  }
+  50% {
+    transform: translate3d(0, -22px, 0) rotate(0);
+  }
+  100% {
+    transform: translate3d(0, -22px, 0) rotate(-45deg);
+  }
+}
+@keyframes animate-line-1-rev {
+  0% {
+    transform: translate3d(0, 22px, 0) rotate(45deg);
+  }
+  50% {
+    transform: translate3d(0, 22px, 0) rotate(0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) rotate(0);
+  }
+}
+@keyframes animate-line-2-rev {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes animate-line-3-rev {
+  0% {
+    transform: translate3d(0, -22px, 0) rotate(-45deg);
+  }
+  50% {
+    transform: translate3d(0, -22px, 0) rotate(0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) rotate(0);
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
